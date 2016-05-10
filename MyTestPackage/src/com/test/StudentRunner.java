@@ -21,9 +21,10 @@ public class StudentRunner {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        for (Students students : StudentUtils.findByFaculty(student,"fel2")) {
+        for (Students students : StudentUtils.findByFaculty(student, "fel2")) {
             System.out.println("students = " + students);
         }
+
 
     }
 }
