@@ -5,26 +5,31 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class StudentRunner {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         List<Students> student = new ArrayList<>();
-        Date date = null;
-        DateFormat dateFormat = new SimpleDateFormat("dd.mm.yyyy");
 
-        try {
-            student.add(new Students(0, "Alex1", "Mitsih", "Vladimirovich", dateFormat.parse("25.09.1990").getTime(), "Kiev1", "067", "fel1", "1", "zdp-31"));
-            student.add(new Students(0, "Alex2", "Mitsih", "Vladimirovich", dateFormat.parse("25.09.1985").getTime(), "Kiev2", "067", "fel2", "2", "zdp-32"));
-            student.add(new Students(0, "Alex3", "Mitsih", "Vladimirovich", dateFormat.parse("25.09.1979").getTime(), "Kiev3", "067", "fel3", "3", "zdp-33"));
-        } catch (ParseException e) {
-            e.printStackTrace();
+
+        student.add(new Students(0, "Alex1", "Mitsih5", "Vladimirovich", getTime("dd.mm.yyyy", "25.09.1990"), "Kiev1", "067", "fel1", "1", "zdp-31"));
+        student.add(new Students(1, "Alex2", "Mitsih3", "Vladimirovich", getTime("dd.mm.yyyy", "25.09.1986"), "Kiev2", "067", "fel2", "2", "zdp-32"));
+        student.add(new Students(3, "Alex3", "Mitsih1", "Vladimirovich", getTime("dd.mm.yyyy", "25.09.1975"), "Kiev3", "067", "fel3", "3", "zdp-33"));
+
+
+        for (Students students : StudentUtils.findByFaculty(student, "fel3")) {
+            System.out.println("students = " + students);
         }
-        for (Students students : StudentUtils.findByFaculty(student, "fel2")) {
+
+        for (Students students : StudentUtils.findByBirthday(student, getTime("dd.mm.yyyy", "25.09.1975"))) {
             System.out.println("students = " + students);
         }
 
 
+    }
+
+    private static long getTime(String dateFormat, String date) throws ParseException {
+        DateFormat dateformat = new SimpleDateFormat(dateFormat);
+        return dateformat.parse(date).getTime();
     }
 }

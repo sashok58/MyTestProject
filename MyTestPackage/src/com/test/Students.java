@@ -1,6 +1,10 @@
 package com.test;
 
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Students {
     private int id;
     private String name;
@@ -109,12 +113,14 @@ public class Students {
 
     @Override
     public String toString() {
+        Date date=new Date(datebirthday);
+        DateFormat dateFormat = new SimpleDateFormat("dd.mm.yyyy");
         return "Students{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", patronimyc='" + patronimyc + '\'' +
-                ", datebirthday=" + datebirthday +
+                ", datebirthday=" + dateFormat.format(date) +
                 ", address='" + address + '\'' +
                 ", telephone='" + telephone + '\'' +
                 ", faculty='" + faculty + '\'' +
