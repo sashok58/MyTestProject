@@ -117,7 +117,7 @@ public class Students {
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", patronimyc='" + patronimyc + '\'' +
-                ", datebirthday=" + getDate(datebirthday,"dd.mm.yyyy") +
+                ", datebirthday=" + getDate(datebirthday, "dd.mm.yyyy") +
                 ", address='" + address + '\'' +
                 ", telephone='" + telephone + '\'' +
                 ", faculty='" + faculty + '\'' +

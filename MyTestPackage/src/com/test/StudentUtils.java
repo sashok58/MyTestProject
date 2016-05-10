@@ -14,40 +14,40 @@ public class StudentUtils {
 
     }
 
-    public static List<Students> findByFaculty(List<Students> student,String faculty){
+    public static List<Students> findByFaculty(List<Students> student, String faculty) {
         List<Students> result = new ArrayList<>();
         for (Students students : student) {
-            if (Objects.equals(students.getFaculty(),faculty)){
+            if (Objects.equals(students.getFaculty(), faculty)) {
                 result.add(students);
             }
         }
         return result;
     }
 
-    public static List<Students> findByFacultyAndCourse(List<Students> student,String faculty,int course){
+    public static List<Students> findByFacultyAndCourse(List<Students> student, String faculty, int course) {
         List<Students> result = new ArrayList<>();
         for (Students students : student) {
-            if (Objects.equals(students.getFaculty(),faculty) && Objects.equals(students.getCourse(),course)){
+            if (Objects.equals(students.getFaculty(), faculty) && Objects.equals(students.getCourse(), course)) {
                 result.add(students);
             }
         }
         return result;
     }
 
-    public static List<Students> findByGroupe(List<Students> student, String groupe){
+    public static List<Students> findByGroupe(List<Students> student, String groupe) {
         List<Students> result = new ArrayList<>();
         for (Students students : student) {
-            if (Objects.equals(students.getGroup(),groupe)){
+            if (Objects.equals(students.getGroup(), groupe)) {
                 result.add(students);
             }
         }
         return result;
     }
 
-    public static List<Students> findByBirthday(List<Students> student, long dateBirthday){
+    public static List<Students> findByBirthday(List<Students> student, long dateBirthday) {
         List<Students> result = new ArrayList<>();
         for (Students students : student) {
-            if (students.getDatebirthday()>dateBirthday){
+            if (students.getDatebirthday() > dateBirthday) {
                 result.add(students);
             }
         }

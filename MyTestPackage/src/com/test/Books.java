@@ -6,7 +6,7 @@ import static com.test.Utils.getDate;
 public class Books {
     private int id;
     private String name;
-    private  String authors;
+    private String authors;
     private String publishingHouse;
     private long yearOfPublishing;
     private int countOfPages;
@@ -96,7 +96,7 @@ public class Books {
                 ", name='" + name + '\'' +
                 ", authors='" + authors + '\'' +
                 ", publishingHouse='" + publishingHouse + '\'' +
-                ", yearOfPublishing=" + getDate(yearOfPublishing,"dd.mm.yyyy") +
+                ", yearOfPublishing=" + getDate(yearOfPublishing, "dd.mm.yyyy") +
                 ", countOfPages=" + countOfPages +
                 ", price=" + price +
                 ", bindingType='" + bindingType + '\'' +

@@ -10,7 +10,7 @@ public class Utils {
 
     public static long getTime(String dateFormat, String date) {
         DateFormat dateformat = new SimpleDateFormat(dateFormat);
-        long timeInMs =0;
+        long timeInMs = 0;
         try {
             timeInMs = dateformat.parse(date).getTime();
         } catch (ParseException e) {
@@ -19,8 +19,8 @@ public class Utils {
         return timeInMs;
     }
 
-    public static String getDate(long dateLong,String dateFormat){
-        Date date=new Date(dateLong);
+    public static String getDate(long dateLong, String dateFormat) {
+        Date date = new Date(dateLong);
         DateFormat dateformat = new SimpleDateFormat(dateFormat);
         return dateformat.format(date);
     }
