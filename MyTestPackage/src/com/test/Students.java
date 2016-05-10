@@ -1,9 +1,7 @@
 package com.test;
 
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import static com.test.Utils.getDate;
 
 public class Students {
     private int id;
@@ -113,14 +111,13 @@ public class Students {
 
     @Override
     public String toString() {
-        Date date=new Date(datebirthday);
-        DateFormat dateFormat = new SimpleDateFormat("dd.mm.yyyy");
+
         return "Students{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", patronimyc='" + patronimyc + '\'' +
-                ", datebirthday=" + dateFormat.format(date) +
+                ", datebirthday=" + getDate(datebirthday,"dd.mm.yyyy") +
                 ", address='" + address + '\'' +
                 ", telephone='" + telephone + '\'' +
                 ", faculty='" + faculty + '\'' +

@@ -1,11 +1,13 @@
 package com.test;
 
 
-import java.text.DateFormat;
+
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.test.Utils.getTime;
 
 public class StudentRunner {
     public static void main(String[] args) throws ParseException {
@@ -28,8 +30,5 @@ public class StudentRunner {
 
     }
 
-    private static long getTime(String dateFormat, String date) throws ParseException {
-        DateFormat dateformat = new SimpleDateFormat(dateFormat);
-        return dateformat.parse(date).getTime();
-    }
+
 }
