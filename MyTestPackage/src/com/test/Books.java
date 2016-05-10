@@ -11,6 +11,18 @@ public class Books {
     private long price;
     private String bindingType;
 
+
+    public Books(int id, String name, String authors, String publishingHouse, long yearOfPublishing, int countOfPages, long price, String bindingType) {
+        this.id = id;
+        this.name = name;
+        this.authors = authors;
+        this.publishingHouse = publishingHouse;
+        this.yearOfPublishing = yearOfPublishing;
+        this.countOfPages = countOfPages;
+        this.price = price;
+        this.bindingType = bindingType;
+    }
+
     public int getId() {
         return id;
     }

@@ -13,6 +13,20 @@ public class Students {
     private String course;
     private String group;
 
+
+    public Students(int id, String name, String surname, String patronimyc, long datebirthday, String address, String telephone, String faculty, String course, String group) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.patronimyc = patronimyc;
+        this.datebirthday = datebirthday;
+        this.address = address;
+        this.telephone = telephone;
+        this.faculty = faculty;
+        this.course = course;
+        this.group = group;
+    }
+
     public int getId() {
         return id;
     }

@@ -44,7 +44,7 @@ public class StudentUtils {
     public static List<Students> findByBirthday(List<Students> student, long dateBirthday){
         List<Students> result = new ArrayList<>();
         for (Students students : student) {
-            if (Objects.equals(students.getDatebirthday(),dateBirthday)){
+            if (students.getDatebirthday()>dateBirthday){
                 result.add(students);
             }
         }
