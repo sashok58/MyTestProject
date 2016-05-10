@@ -8,9 +8,15 @@ import java.util.Date;
 
 public class Utils {
 
-    public static long getTime(String dateFormat, String date) throws ParseException {
+    public static long getTime(String dateFormat, String date) {
         DateFormat dateformat = new SimpleDateFormat(dateFormat);
-        return dateformat.parse(date).getTime();
+        long timeInMs =0;
+        try {
+            timeInMs = dateformat.parse(date).getTime();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return timeInMs;
     }
 
     public static String getDate(long dateLong,String dateFormat){
