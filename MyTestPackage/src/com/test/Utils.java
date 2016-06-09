@@ -4,7 +4,9 @@ package com.test;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 public class Utils {
 
@@ -23,5 +25,11 @@ public class Utils {
         Date date = new Date(dateLong);
         DateFormat dateformat = new SimpleDateFormat(dateFormat);
         return dateformat.format(date);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getTime("dd.MM.yyyy","30.05.2016"));
+        System.out.println(getDate(1464555600000l,"dd.MM.yyyy"));
+
     }
 }
